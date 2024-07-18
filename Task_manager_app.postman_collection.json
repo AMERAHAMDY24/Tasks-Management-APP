@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "2da6e168-0b04-434c-9693-e944cd51be38",
+		"name": "Task_manager_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32058438"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\":\"sara Ahmed\",\r\n\"email\":\"sara22@gmail.com\",\r\n\"password\":\"Am123!ira\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\":\"sara22@gmail.com\",\r\n\"password\":\"Am123!ira\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/signin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "addTask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "task55555 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkwMjk0YjZmMTRkMWRmMGQ5MjgyZGIiLCJlbWFpbCI6Im1hcmFtQGdtYWlsLmNvbSIsImlhdCI6MTcyMDcyMzgwNCwiZXhwIjoxNzIwNzMxMDA0fQ.ABGEaPF2Po77xwYC_Fi2ktxKOBa6kOTK2Cx48-Zb7ds",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\":\"study Type Script\",\r\n\"userId\":\"6690294b6f14d1df0d9282db\",\r\n\"shared\":\"public\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task/addTask",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"addTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "task55555 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkwMzYzN2I2NjhjZWI1YTRiOTc5NTgiLCJlbWFpbCI6Im1hbmFyQGdtYWlsLmNvbSIsImlhdCI6MTcyMDcyNzEwNiwiZXhwIjoxNzIwNzM0MzA2fQ.iOheQw4ZzT73ORWgYONATetiJVB7yzIbDQOL4xxrAp4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/task/getTasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"getTasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "task55555 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkxY2JiZTExOWNmMjkyYjFkN2RmN2UiLCJlbWFpbCI6Im1lcmFhQGdtYWlsLmNvbSIsImlhdCI6MTcyMDgzMjM0OSwiZXhwIjoxNzIwODM5NTQ5fQ.m47XasqzUH1gEN5MZl1DJtkuvzUQsFOai6m4w1YPQjw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"shared\":\"public\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task/updateTask/6691cda6d87c43776e17df5f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"updateTask",
+								"6691cda6d87c43776e17df5f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "task55555 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkxY2JiZTExOWNmMjkyYjFkN2RmN2UiLCJlbWFpbCI6Im1lcmFhQGdtYWlsLmNvbSIsImlhdCI6MTcyMDgzMjM0OSwiZXhwIjoxNzIwODM5NTQ5fQ.m47XasqzUH1gEN5MZl1DJtkuvzUQsFOai6m4w1YPQjw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task/deleteTask/6691cda6d87c43776e17df5f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"deleteTask",
+								"6691cda6d87c43776e17df5f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterTasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/task/filterTasks?shared=private",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"filterTasks"
+							],
+							"query": [
+								{
+									"key": "shared",
+									"value": "private"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tasksPagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/task/tasksPagination?p=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"tasksPagination"
+							],
+							"query": [
+								{
+									"key": "p",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sortTasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/task/sortTasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"sortTasks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "task55555 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkxZDIyMzY0OTAwZjg5OTBmYzU4YWQiLCJlbWFpbCI6Im1haTJAZ21haWwuY29tIiwiaWF0IjoxNzIwODMyNTY1LCJleHAiOjE3MjA4Mzk3NjV9.bTXeFdDNJV3MK2Iy-kjBPz4gWQwhV-2ALOKQiErj9l4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\r\n    \"name\":\"implement Web APPs\",\r\n    \"user\":\"6691d22364900f8990fc58ad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/category/addCategory",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listCategories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/getCategories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"getCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "task55555 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkxY2M3YmEzYTVmY2NjODQ5MDEwMGIiLCJlbWFpbCI6InNhcmEyMkBnbWFpbC5jb20iLCJpYXQiOjE3MjA4MzQ1MjQsImV4cCI6MTcyMDg0MTcyNH0.ATarFmwQOHvxyg9hqXMtMRAzddvCOH8k80mAkkxKlhk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\":\"AI & Machine Learning  Tasks\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/category/updateCategory/6691da34e4d5196842a96f33",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"updateCategory",
+								"6691da34e4d5196842a96f33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "task55555 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkxY2M3YmEzYTVmY2NjODQ5MDEwMGIiLCJlbWFpbCI6InNhcmEyMkBnbWFpbC5jb20iLCJpYXQiOjE3MjA4MzQ1MjQsImV4cCI6MTcyMDg0MTcyNH0.ATarFmwQOHvxyg9hqXMtMRAzddvCOH8k80mAkkxKlhk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/deleteCategory/6691da34e4d5196842a96f33",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"deleteCategory",
+								"6691da34e4d5196842a96f33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterCategoriesByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/category/filterCategories?name=implement IOS APPs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"filterCategories"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "implement IOS APPs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categoryPagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/category/categoriesPagination?p",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"categoriesPagination"
+							],
+							"query": [
+								{
+									"key": "p",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sortCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/category/sortCategories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"sortCategories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
